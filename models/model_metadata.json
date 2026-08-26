@@ -1,0 +1,53 @@
+{
+  "model_version": "v1.0.0",
+  "trained_date": "2026-08-26",
+  "dataset_size": 1250,
+  "feature_count": 16,
+  "metrics": {
+    "accuracy": 0.86,
+    "precision": 0.8652,
+    "recall": 0.8841,
+    "f1_score": 0.8746,
+    "roc_auc": 0.9543,
+    "mae_days": 33.48,
+    "r2_score": 0.8767,
+    "baseline_lr_acc": 0.836,
+    "baseline_rf_acc": 0.848
+  },
+  "feature_importance": {
+    "land_area_acres": 0.019621603190898895,
+    "affected_families": 0.020104745402932167,
+    "budget_inr_cr": 0.019978832453489304,
+    "compensation_completion_percentage": 0.018723390996456146,
+    "legal_pending_ratio": 0.019429601728916168,
+    "legal_dispute_density": 0.016579966992139816,
+    "stay_orders_count": 0.014811170287430286,
+    "documentation_completion_percentage": 0.018661363050341606,
+    "approval_delay_score": 0.020947638899087906,
+    "rr_completion_score": 0.07190026342868805,
+    "stakeholder_response_score": 0.09359806776046753,
+    "administrative_bottleneck_score": 0.17530986666679382,
+    "dept_workload_score": 0.01757766120135784,
+    "sla_compliance_percentage": 0.44055822491645813,
+    "proj_type_code": 0.013863072730600834,
+    "stage_code": 0.018334487453103065
+  },
+  "human_feature_mapping": {
+    "land_area_acres": "Land Area (Acres)",
+    "affected_families": "Affected Families Count",
+    "budget_inr_cr": "Project Budget (INR Cr)",
+    "compensation_completion_percentage": "Compensation Payment Progress (%)",
+    "legal_pending_ratio": "Pending Legal Case Ratio",
+    "legal_dispute_density": "Dispute Density per 100 Acres",
+    "stay_orders_count": "Active Judicial Stay Orders",
+    "documentation_completion_percentage": "Title Clearance & Doc Verification (%)",
+    "approval_delay_score": "Clearance Approval Delay (Days)",
+    "rr_completion_score": "R&R Resettlement Progress (%)",
+    "stakeholder_response_score": "Community Opposition Index",
+    "administrative_bottleneck_score": "Administrative Processing Bottleneck",
+    "dept_workload_score": "Department Workload Score",
+    "sla_compliance_percentage": "SLA Compliance Rate (%)",
+    "proj_type_code": "Project Infrastructure Sector",
+    "stage_code": "Lifecycle Acquisition Stage"
+  }
+}
