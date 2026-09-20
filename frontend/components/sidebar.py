@@ -42,14 +42,14 @@ def render_enterprise_sidebar(user: dict) -> str:
         # 2. Compact User Context Avatar Card (White Card Theme)
         scope_text = f"{user['state_name'].upper()}" if user.get('state_name') else f"{scope_type} SCOPE"
         st.markdown(f"""
-        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; margin-bottom: 16px; display:flex; align-items:flex-start; gap:10px;">
-            <div style="width:32px; height:32px; border-radius:50%; background:#1E4D2B; display:flex; align-items:center; justify-content:center; color:#FFFFFF; font-weight:800; font-size:14px;">
+        <div class="user-card-white-box" style="display:flex; align-items:flex-start; gap:10px;">
+            <div style="width:32px; height:32px; border-radius:50%; background:#166534; display:flex; align-items:center; justify-content:center; color:#FFFFFF; font-weight:800; font-size:14px;">
                 &bull;
             </div>
             <div style="flex:1;">
-                <div style="font-size: 13px; font-weight: 700; color: #0F172A !important;">{user['full_name']}</div>
-                <div style="font-size: 10px; color: #475569 !important; margin-top: 1px;">{role} &bull; {scope_text}</div>
-                <div style="display: flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 10px; color: #16A34A !important; font-weight: 600;">
+                <div class="user-name-text">{user['full_name']}</div>
+                <div class="user-role-text">{role} &bull; {scope_text}</div>
+                <div class="user-status-text" style="display: flex; align-items: center; gap: 6px; margin-top: 4px;">
                     <span style="display:inline-block; width:6px; height:6px; background:#16A34A; border-radius:50%;"></span>
                     System Operational
                 </div>

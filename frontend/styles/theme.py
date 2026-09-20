@@ -1,6 +1,6 @@
 """
 Exact Reference Design Theme & CSS Engine for VISTRA.
-Forces clean white elevated card elements (#FFFFFF), forest green brand accent (#1E4D2B / #166534), dark navy sidebar (#0B132B), and fixed floating circular AI bot button.
+Forces clean white elevated card elements (#FFFFFF), pure white selectboxes/inputs, forest green brand accent (#1E4D2B / #166534), dark navy sidebar (#0B132B), and fixed floating circular AI bot button.
 """
 
 import streamlit as st
@@ -23,12 +23,11 @@ def apply_custom_theme():
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 8px 0 16px 0;
+        padding: 16px 20px;
         border-bottom: 1px solid #E2E8F0;
         margin-bottom: 20px;
         background: #FFFFFF;
         border-radius: 12px;
-        padding: 16px 20px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
 
@@ -106,12 +105,70 @@ def apply_custom_theme():
         align-items: center;
     }
 
+    /* Streamlit Selectbox, Inputs & Filter Bars — Pure White Cards */
+    div[data-baseweb="select"] > div,
+    div[data-baseweb="input"] > div,
+    div[data-baseweb="select"],
+    div[data-baseweb="input"],
+    .stSelectbox div[role="combobox"],
+    .stSelectbox div[role="button"],
+    .stTextInput input,
+    .stNumberInput input,
+    .stMultiSelect div[role="combobox"] {
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+        border: 1px solid #CBD5E1 !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        font-size: 13px !important;
+    }
+
+    div[data-baseweb="select"] *,
+    div[data-baseweb="input"] *,
+    .stSelectbox * {
+        color: #0F172A !important;
+    }
+
+    /* Dropdown Options Popup Menu */
+    div[data-baseweb="menu"],
+    ul[data-baseweb="menu"],
+    div[role="listbox"] {
+        background-color: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+        border-radius: 8px !important;
+    }
+
+    li[data-baseweb="option"],
+    div[role="option"] {
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+    }
+
+    li[data-baseweb="option"]:hover,
+    div[role="option"][aria-selected="true"] {
+        background-color: #F1F5F9 !important;
+        color: #166534 !important;
+        font-weight: 700 !important;
+    }
+
     /* White Background Content Rectangles & Expanders */
     .stExpander {
         background-color: #FFFFFF !important;
         border: 1px solid #E2E8F0 !important;
         border-radius: 10px !important;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03) !important;
+    }
+
+    .stExpander summary {
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+        font-weight: 800 !important;
+        font-size: 13px !important;
+    }
+
+    .stExpander summary * {
+        color: #0F172A !important;
     }
 
     /* Priority Alerts Rows */
@@ -136,11 +193,7 @@ def apply_custom_theme():
         border-right: 1px solid #1E293B;
     }
 
-    section[data-testid="stSidebar"] *, div[data-testid="stSidebar"] * {
-        color: #F8FAFC !important;
-        opacity: 1 !important;
-    }
-
+    /* Sidebar text colors — target specific elements without breaking white cards */
     .sidebar-section-label {
         font-size: 10px;
         font-weight: 700;
@@ -148,6 +201,39 @@ def apply_custom_theme():
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 10px 12px 4px 12px;
+    }
+
+    .user-card-white-box {
+        background: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 10px !important;
+        padding: 14px !important;
+        margin-bottom: 16px !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06) !important;
+    }
+
+    .user-card-white-box * {
+        color: initial;
+    }
+
+    .user-name-text {
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        color: #0F172A !important;
+        letter-spacing: -0.2px !important;
+    }
+
+    .user-role-text {
+        font-size: 10px !important;
+        color: #475569 !important;
+        margin-top: 1px !important;
+        font-weight: 600 !important;
+    }
+
+    .user-status-text {
+        font-size: 10px !important;
+        color: #16A34A !important;
+        font-weight: 700 !important;
     }
 
     /* VISTRA Forest Green (#166534 / #1E4D2B) for Active Navigation Buttons */
@@ -176,7 +262,6 @@ def apply_custom_theme():
         font-weight: 500 !important;
         padding: 8px 12px !important;
         border-radius: 6px !important;
-        opacity: 1 !important;
     }
 
     section[data-testid="stSidebar"] .stButton > button[kind="secondary"]:hover,
@@ -238,4 +323,5 @@ def apply_custom_theme():
     }
     </style>
     """, unsafe_allow_html=True)
+
 
