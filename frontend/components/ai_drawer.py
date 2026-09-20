@@ -1,5 +1,5 @@
 """
-Floating Bottom-Right AI Assistant Popover Drawer Component for LANDGUARD AI.
+Floating Bottom-Right AI Assistant Popover Drawer Component for VISTRA.
 Context-aware, RBAC scope-enforced, persistent conversation memory, quick-action chips, and detailed decision support answers. Zero emojis.
 """
 
@@ -16,8 +16,8 @@ def render_floating_ai_assistant(user: dict):
         st.session_state["ai_chat_history"] = []
 
     # Fixed Circular Floating AI Assistant Popover in Bottom Right Corner
-    with st.popover("🤖", help="Ask LANDGUARD AI Decision Assistant"):
-        st.markdown("### LANDGUARD AI — AI Decision Assistant")
+    with st.popover("🤖", help="Ask VISTRA Decision Assistant"):
+        st.markdown("### VISTRA — AI Decision Assistant")
         scope_label = get_scope_label(user)
         st.caption(f"Context-aware decision support strictly within authorized scope (**{scope_label}**).")
 
@@ -106,7 +106,7 @@ def render_floating_ai_assistant(user: dict):
             st.markdown("**Conversation History:**")
             for chat in reversed(st.session_state["ai_chat_history"][-4:]):
                 st.markdown(f"**You:** {chat['user']}")
-                st.markdown(f"**LANDGUARD AI:**\n{chat['assistant']}")
+                st.markdown(f"**VISTRA:**\n{chat['assistant']}")
                 if chat.get("data"):
                     df_chip = pd.DataFrame(chat["data"])
                     st.dataframe(

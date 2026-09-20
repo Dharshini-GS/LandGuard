@@ -1,5 +1,5 @@
 """
-Exact Reference Design Sidebar for LANDGUARD AI.
+Exact Reference Design Sidebar for VISTRA.
 Replicates screenshot layout, colors, pill-shaped active items, user context avatar card, and badge counter.
 """
 
@@ -21,32 +21,36 @@ def render_enterprise_sidebar(user: dict) -> str:
     current_page = st.session_state.get("page", "Dashboard")
 
     with st.sidebar:
-        # 1. Brand Box with Collapse Icon
+        # 1. Brand Box with Logo & Collapse Icon
         col_b1, col_b2 = st.columns([4, 1])
         with col_b1:
+            import os
+            logo_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "assets", "vistra_logo.png")
+            if os.path.exists(logo_path):
+                st.image(logo_path, width=42)
             st.markdown("""
-            <div style="display:flex; align-items:center; gap:8px;">
-                <div style="font-size:20px; font-weight:800; color:#FFFFFF !important; letter-spacing:0.5px;">LANDGUARD AI</div>
+            <div style="display:flex; align-items:center; gap:8px; margin-top:4px;">
+                <div style="font-size:22px; font-weight:800; color:#FFFFFF !important; letter-spacing:0.5px;">VISTRA</div>
             </div>
-            <div style="font-size:11px; color:#38BDF8 !important; font-weight:600; margin-top:2px;">Predict Before It Delays.</div>
+            <div style="font-size:11px; color:#4ADE80 !important; font-weight:600; margin-top:2px;">Predict Before It Delays.</div>
             """, unsafe_allow_html=True)
         with col_b2:
             st.markdown("<div style='text-align:right; color:#64748B; cursor:pointer; font-weight:700;'>&laquo;</div>", unsafe_allow_html=True)
 
         st.markdown("<hr style='border-color:#1E293B; margin:12px 0 14px 0;'/>", unsafe_allow_html=True)
 
-        # 2. Compact User Context Avatar Card
+        # 2. Compact User Context Avatar Card (White Card Theme)
         scope_text = f"{user['state_name'].upper()}" if user.get('state_name') else f"{scope_type} SCOPE"
         st.markdown(f"""
-        <div style="background: #172033; border-radius: 8px; padding: 12px; margin-bottom: 16px; display:flex; align-items:flex-start; gap:10px;">
-            <div style="width:32px; height:32px; border-radius:50%; background:#1E293B; display:flex; align-items:center; justify-content:center; color:#94A3B8; font-weight:800; font-size:14px;">
+        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; margin-bottom: 16px; display:flex; align-items:flex-start; gap:10px;">
+            <div style="width:32px; height:32px; border-radius:50%; background:#1E4D2B; display:flex; align-items:center; justify-content:center; color:#FFFFFF; font-weight:800; font-size:14px;">
                 &bull;
             </div>
             <div style="flex:1;">
-                <div style="font-size: 13px; font-weight: 700; color: #FFFFFF !important;">{user['full_name']}</div>
-                <div style="font-size: 10px; color: #94A3B8 !important; margin-top: 1px;">{role} &bull; {scope_text} &or;</div>
-                <div style="display: flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 10px; color: #22C55E !important; font-weight: 600;">
-                    <span style="display:inline-block; width:6px; height:6px; background:#22C55E; border-radius:50%;"></span>
+                <div style="font-size: 13px; font-weight: 700; color: #0F172A !important;">{user['full_name']}</div>
+                <div style="font-size: 10px; color: #475569 !important; margin-top: 1px;">{role} &bull; {scope_text}</div>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 10px; color: #16A34A !important; font-weight: 600;">
+                    <span style="display:inline-block; width:6px; height:6px; background:#16A34A; border-radius:50%;"></span>
                     System Operational
                 </div>
             </div>

@@ -1,5 +1,5 @@
 """
-Projects Endpoint for LANDGUARD AI.
+Projects Endpoint for VISTRA.
 Supports scope-enforced search, filtering, sorting, pagination, and detail inspection.
 """
 

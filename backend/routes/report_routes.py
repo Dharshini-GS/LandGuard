@@ -1,5 +1,5 @@
 """
-PDF Report Generation Endpoint for LANDGUARD AI.
+PDF Report Generation Endpoint for VISTRA.
 """
 
 from fastapi import APIRouter, Depends, HTTPException
@@ -24,6 +24,6 @@ def download_project_report(project_id: str, current_user: dict = Depends(get_cu
 
     return FileResponse(
         path=str(filepath),
-        filename=f"LANDGUARD_Risk_Report_{project_id}.pdf",
+        filename=f"VISTRA_Risk_Report_{project_id}.pdf",
         media_type="application/pdf"
     )

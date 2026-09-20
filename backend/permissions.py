@@ -1,5 +1,5 @@
 """
-Scope & Authorization Enforcement Engine for LANDGUARD AI.
+Scope & Authorization Enforcement Engine for VISTRA.
 Enforces geographic and project-level RBAC restrictions at the database/query layer.
 Never relies on frontend filtering. Unauthorized access yields HTTP 403.
 """

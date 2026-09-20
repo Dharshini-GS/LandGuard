@@ -1,5 +1,5 @@
 """
-Risk Analysis & Trends Page for LANDGUARD AI.
+Risk Analysis & Trends Page for VISTRA.
 """
 
 import streamlit as st

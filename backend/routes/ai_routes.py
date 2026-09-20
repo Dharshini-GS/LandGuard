@@ -1,5 +1,5 @@
 """
-Scope-Aware AI Assistant Endpoint for LANDGUARD AI.
+Scope-Aware AI Assistant Endpoint for VISTRA.
 Provides local deterministic risk analytics queries respecting user scope bounds.
 """
 

@@ -1,5 +1,5 @@
 """
-Official Geographic Reference Data for LANDGUARD AI.
+Official Geographic Reference Data for VISTRA.
 Covers all 28 States and 8 Union Territories of India with representative districts and coordinates.
 """
 

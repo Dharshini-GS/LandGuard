@@ -1,5 +1,5 @@
 """
-Professional SVG Icons for LANDGUARD AI.
+Professional SVG Icons for VISTRA.
 Matches exact design reference glyphs. Zero unicode emojis.
 """
 

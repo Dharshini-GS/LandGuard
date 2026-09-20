@@ -1,5 +1,5 @@
 """
-Executive Control Center Header Component for LANDGUARD AI.
+Executive Control Center Header Component for VISTRA.
 Clean top-header bar: Executive Control Center title, status active, and alert bell. Zero deploy button.
 """
 
@@ -17,11 +17,24 @@ def render_header(user: dict):
     col_h1, col_h2 = st.columns([2.2, 0.8])
 
     with col_h1:
-        st.markdown("""
-        <div style="display:flex; align-items:center; gap:10px; padding: 4px 0 12px 0;">
-            <div style="font-size:24px; font-weight:800; color:#0F172A;">Executive Control Center</div>
-        </div>
-        """, unsafe_allow_html=True)
+        import os
+        logo_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "assets", "vistra_logo.png")
+        if os.path.exists(logo_path):
+            ch1, ch2 = st.columns([0.25, 3])
+            with ch1:
+                st.image(logo_path, width=38)
+            with ch2:
+                st.markdown("""
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <div style="font-size:24px; font-weight:800; color:#0F172A;">VISTRA — Executive Control Center</div>
+                </div>
+                """, unsafe_allow_html=True)
+        else:
+            st.markdown("""
+            <div style="display:flex; align-items:center; gap:10px; padding: 4px 0 12px 0;">
+                <div style="font-size:24px; font-weight:800; color:#0F172A;">VISTRA — Executive Control Center</div>
+            </div>
+            """, unsafe_allow_html=True)
 
     with col_h2:
         c_act, c_bell = st.columns([1.2, 1])

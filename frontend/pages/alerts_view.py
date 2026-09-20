@@ -1,5 +1,5 @@
 """
-Alert Center Page for LANDGUARD AI.
+Alert Center Page for VISTRA.
 Implements early-warning alert notifications, status updates, and project navigation. Zero emojis.
 """
 

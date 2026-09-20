@@ -1,5 +1,5 @@
 """
-Data Generator for LANDGUARD AI (SIH26017 Prototype).
+Data Generator for VISTRA (SIH26017 Prototype).
 Generates ~1,300 realistic synthetic project records across all 28 Indian States and 8 Union Territories.
 Applies controlled correlations and noise for realistic risk distribution.
 Outputs 14 CSV files to data/ directory.

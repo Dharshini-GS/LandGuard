@@ -1,5 +1,5 @@
 """
-ML Training Pipeline for LANDGUARD AI.
+ML Training Pipeline for VISTRA.
 Trains XGBoost Classifier (delay probability) and Regressor (expected delay days).
 Includes feature engineering, baseline comparisons (Logistic Regression, Random Forest),
 SHAP Explainer initialization, and metadata export to models/ directory.

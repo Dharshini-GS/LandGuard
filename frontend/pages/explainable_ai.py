@@ -1,5 +1,5 @@
 """
-Explainable AI (SHAP) Page for LANDGUARD AI.
+Explainable AI (SHAP) Page for VISTRA.
 Features interactive Plotly Waterfall Attribution Chart & Feature Sensitivity Analysis.
 """
 

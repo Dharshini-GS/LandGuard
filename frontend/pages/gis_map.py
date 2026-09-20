@@ -1,5 +1,5 @@
 """
-Interactive Folium GIS Map Page for LANDGUARD AI.
+Interactive Folium GIS Map Page for VISTRA.
 Features cluster markers and HeatMap risk density overlays.
 """
 

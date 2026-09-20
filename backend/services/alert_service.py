@@ -1,5 +1,5 @@
 """
-Centralized Alert Service for LANDGUARD AI.
+Centralized Alert Service for VISTRA.
 Evaluates authoritative project data & risk history, generates alerts, enforces scope, and synchronizes counts.
 """
 

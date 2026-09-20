@@ -1,5 +1,5 @@
 """
-Authentication Endpoints for LANDGUARD AI.
+Authentication Endpoints for VISTRA.
 """
 
 from fastapi import APIRouter, Depends, HTTPException, status

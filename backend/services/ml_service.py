@@ -1,5 +1,5 @@
 """
-ML Inference, SHAP Explanation, and What-If Simulation Engine for LANDGUARD AI.
+ML Inference, SHAP Explanation, and What-If Simulation Engine for VISTRA.
 """
 
 import sys

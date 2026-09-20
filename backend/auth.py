@@ -1,5 +1,5 @@
 """
-Authentication & JWT Session Management for LANDGUARD AI.
+Authentication & JWT Session Management for VISTRA.
 """
 
 from datetime import datetime, timedelta

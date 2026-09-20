@@ -1,5 +1,5 @@
 """
-FastAPI Server Entry Point for LANDGUARD AI.
+FastAPI Server Entry Point for VISTRA.
 Predictive Analytics System for Early Detection of Land Acquisition Delays (SIH26017).
 """
 
@@ -28,7 +28,7 @@ from utils.logger import get_logger
 logger = get_logger("FastAPIApp")
 
 app = FastAPI(
-    title="LANDGUARD AI — Backend API",
+    title="VISTRA — Backend API",
     description="Early-Warning & Decision-Support Platform for Land Acquisition Projects (SIH26017)",
     version="1.0.0"
 )
@@ -56,7 +56,7 @@ app.include_router(ai_router)
 @app.get("/")
 def root():
     return {
-        "app": "LANDGUARD AI",
+        "app": "VISTRA",
         "tagline": "Predict Before It Delays.",
         "notice": SYNTHETIC_DATA_BANNER,
         "disclaimer": SYNTHETIC_DATA_DISCLAIMER,

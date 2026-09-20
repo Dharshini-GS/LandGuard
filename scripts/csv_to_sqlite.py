@@ -1,6 +1,6 @@
 """
-SQLite Database Importer & Builder for LANDGUARD AI.
-Creates database/landguard.db from data/*.csv files.
+SQLite Database Importer & Builder for VISTRA.
+Creates database/VISTRA.db from data/*.csv files.
 Enforces foreign key constraints and creates indexes for performance.
 """
 

@@ -1,5 +1,5 @@
 """
-Database Repository Layer for LANDGUARD AI.
+Database Repository Layer for VISTRA.
 Handles SQLite connection pooling, SQL execution, and scope-based queries.
 """
 

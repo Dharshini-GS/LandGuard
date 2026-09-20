@@ -1,4 +1,4 @@
-# 🛡️ LANDGUARD AI — Predict Before It Delays
+# 🛡️ VISTRA — Predict Before It Delays
 
 > **SIH26017 — Predictive Analytics System for Early Detection of Land Acquisition Delays**
 
@@ -12,9 +12,9 @@
 
 ## 📌 Project Overview
 
-**LANDGUARD AI** is an enterprise AI-powered early-warning decision-support platform designed for land acquisition infrastructure projects across India.
+**VISTRA** is an enterprise AI-powered early-warning decision-support platform designed for land acquisition infrastructure projects across India.
 
-Instead of merely displaying where land acquisition is currently delayed, LANDGUARD AI:
+Instead of merely displaying where land acquisition is currently delayed, VISTRA:
 1. **Predicts** where the next delay is likely to occur using XGBoost classifiers and regressors.
 2. **Explains** why the delay is likely to occur using SHAP (SHapley Additive exPlanations) feature attribution.
 3. **Simulates** policy interventions via interactive What-If scenario modeling.
@@ -113,7 +113,7 @@ Backend queries enforce scope restrictions at the database query layer:
 ## 📁 Repository Folder Structure
 
 ```text
-LANDGUARD_AI/
+VISTRA_AI/
 │
 ├── app.py                      # Main Streamlit Entry Point & Navigation Shell
 │
@@ -134,7 +134,7 @@ LANDGUARD_AI/
 │   └── services/               # Core Services (ML Engine, PDF Service, Audit Logger)
 │
 ├── data/                       # Generated CSV Dataset Files (14 CSVs + Geo Reference)
-├── database/                   # SQLite Storage (`landguard.db`)
+├── database/                   # SQLite Storage (`VISTRA.db`)
 ├── models/                     # Trained Model Artifacts (`delay_model.pkl`, `preprocessor.pkl`)
 ├── reports/                    # Generated Executive PDF Output Directory
 │
@@ -178,4 +178,4 @@ LANDGUARD_AI/
 
 ## 📜 Synthetic Data Disclaimer
 
-> LANDGUARD AI is a prototype system developed for demonstration purposes. All project records, beneficiary numbers, budget figures, legal dispute entries, and spatial points are synthetically generated representations designed to demonstrate predictive capabilities, explainability, and governance mechanisms. No real government records were fabricated.
+> VISTRA is a prototype system developed for demonstration purposes. All project records, beneficiary numbers, budget figures, legal dispute entries, and spatial points are synthetically generated representations designed to demonstrate predictive capabilities, explainability, and governance mechanisms. No real government records were fabricated.

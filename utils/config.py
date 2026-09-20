@@ -9,7 +9,7 @@ MODELS_DIR = BASE_DIR / "models"
 REPORTS_DIR = BASE_DIR / "reports"
 SCRIPTS_DIR = BASE_DIR / "scripts"
 
-DATABASE_PATH = DATABASE_DIR / "landguard.db"
+DATABASE_PATH = DATABASE_DIR / "VISTRA.db"
 MODEL_CLASSIFIER_PATH = MODELS_DIR / "delay_model.pkl"
 MODEL_REGRESSOR_PATH = MODELS_DIR / "delay_regressor.pkl"
 PREPROCESSOR_PATH = MODELS_DIR / "preprocessor.pkl"
@@ -20,7 +20,7 @@ for d in [DATA_DIR, DATABASE_DIR, MODELS_DIR, REPORTS_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
 # Security & JWT
-JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "landguard-ai-secure-secret-key-2026-sih26017")
+JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "VISTRA-ai-secure-secret-key-2026-sih26017")
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRATION_MINUTES = 60 * 24  # 24 hours
 

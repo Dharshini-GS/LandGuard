@@ -1,5 +1,5 @@
 """
-LANDGUARD AI — Main Command Center Application Entry Point.
+VISTRA — Main Command Center Application Entry Point.
 Predict Before It Delays.
 """
 
@@ -13,7 +13,7 @@ sys.path.insert(0, str(BASE_DIR))
 
 # Streamlit Page Setup
 st.set_page_config(
-    page_title="LANDGUARD AI — Government Intelligence Command Center",
+    page_title="VISTRA — Infrastructure Intelligence Command Center",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded"

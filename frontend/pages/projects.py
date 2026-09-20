@@ -1,5 +1,5 @@
 """
-Projects Explorer, Creation & Detail Editing Page for LANDGUARD AI.
+Projects Explorer, Creation & Detail Editing Page for VISTRA.
 Enables searching, viewing, adding new projects, updating project details, and binary PDF downloading. Zero emojis.
 """
 
@@ -201,7 +201,7 @@ def _render_project_detail_panel(user: dict, project_id: str):
     st.download_button(
         label=f"DOWNLOAD PROJECT PDF REPORT ({project_id})",
         data=pdf_bytes,
-        file_name=f"LANDGUARD_Report_{project_id}.pdf",
+        file_name=f"VISTRA_Report_{project_id}.pdf",
         mime="application/pdf",
         key=f"btn_dl_proj_{project_id}"
     )

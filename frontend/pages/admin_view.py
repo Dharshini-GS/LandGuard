@@ -1,5 +1,5 @@
 """
-Admin Control Center Page for LANDGUARD AI.
+Admin Control Center Page for VISTRA.
 Provides User Management, Model Administration & Retrain, Audit Logs, and System Health.
 """
 

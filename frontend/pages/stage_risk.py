@@ -1,5 +1,5 @@
 """
-Stage-Wise Risk Analysis Page for LANDGUARD AI.
+Stage-Wise Risk Analysis Page for VISTRA.
 Clean professional lifecycle stage breakdown.
 """
 

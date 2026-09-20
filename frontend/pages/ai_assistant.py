@@ -1,5 +1,5 @@
 """
-Scope-Aware AI Assistant Interface Page for LANDGUARD AI.
+Scope-Aware AI Assistant Interface Page for VISTRA.
 Provides conversational intelligence strictly bounded to user scope.
 """
 
@@ -37,7 +37,7 @@ def render_ai_assistant_page(user: dict):
         if st.button("⚖️ High legal dispute cases?", use_container_width=True, key="ai_suggest_5"):
             query_input = "Show projects with high legal disputes"
 
-    user_query = st.text_input("Ask LANDGUARD AI Assistant a question:", value=query_input, placeholder="e.g. Which projects need immediate attention?", key="ai_query_input_text")
+    user_query = st.text_input("Ask VISTRA Assistant a question:", value=query_input, placeholder="e.g. Which projects need immediate attention?", key="ai_query_input_text")
 
     if user_query:
         _process_ai_query(user, user_query)

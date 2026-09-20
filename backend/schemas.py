@@ -1,5 +1,5 @@
 """
-Pydantic Schemas for LANDGUARD AI FastAPI Endpoints.
+Pydantic Schemas for VISTRA FastAPI Endpoints.
 """
 
 from pydantic import BaseModel, Field

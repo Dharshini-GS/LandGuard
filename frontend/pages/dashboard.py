@@ -1,5 +1,5 @@
 """
-Exact Reference Design Executive Control Center Dashboard Page for LANDGUARD AI.
+Exact Reference Design Executive Control Center Dashboard Page for VISTRA.
 Clean layout without raw unclosed div wrapper issues. Zero emojis.
 """
 

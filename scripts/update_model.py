@@ -1,5 +1,5 @@
 """
-Model Update Script for LANDGUARD AI.
+Model Update Script for VISTRA.
 Triggers retraining of ML models from the current database state.
 """
 

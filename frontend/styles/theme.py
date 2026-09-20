@@ -1,6 +1,6 @@
 """
-Exact Reference Design Theme & CSS Engine for LANDGUARD AI.
-Forces dark navy sidebar (#0B132B), primary blue active navigation (#0284C7), fixed floating circular AI bot button.
+Exact Reference Design Theme & CSS Engine for VISTRA.
+Forces clean white elevated card elements (#FFFFFF), forest green brand accent (#1E4D2B / #166534), dark navy sidebar (#0B132B), and fixed floating circular AI bot button.
 """
 
 import streamlit as st
@@ -26,17 +26,21 @@ def apply_custom_theme():
         padding: 8px 0 16px 0;
         border-bottom: 1px solid #E2E8F0;
         margin-bottom: 20px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 16px 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
 
-    /* Exact KPI Cards */
+    /* Crisp White KPI & Container Cards */
     .kpi-card-exact {
-        background: #FFFFFF;
-        border: 1px solid #E2E8F0;
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-        height: 100%;
-        position: relative;
+        background: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 10px !important;
+        padding: 18px !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+        height: 100% !important;
+        position: relative !important;
     }
 
     .kpi-header-row {
@@ -47,12 +51,13 @@ def apply_custom_theme():
     }
 
     .kpi-icon-wrapper {
-        width: 28px;
-        height: 28px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 15px;
     }
 
     .kpi-label-exact {
@@ -65,14 +70,14 @@ def apply_custom_theme():
     .kpi-val-exact {
         font-size: 26px;
         font-weight: 800;
-        color: #0F172A;
+        color: #0F172A !important;
         line-height: 1.1;
         margin: 4px 0;
     }
 
     .kpi-sub-exact {
         font-size: 11px;
-        color: #64748B;
+        color: #64748B !important;
         margin-bottom: 8px;
     }
 
@@ -90,9 +95,9 @@ def apply_custom_theme():
     .trend-down-green { color: #16A34A; }
 
     .chart-title-exact {
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 800;
-        color: #0F172A;
+        color: #0F172A !important;
         text-transform: uppercase;
         letter-spacing: 0.6px;
         margin-bottom: 12px;
@@ -101,19 +106,29 @@ def apply_custom_theme():
         align-items: center;
     }
 
+    /* White Background Content Rectangles & Expanders */
+    .stExpander {
+        background-color: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
+        border-radius: 10px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+    }
+
     /* Priority Alerts Rows */
     .alert-row-item {
-        padding: 8px 12px;
-        border-radius: 6px;
-        margin-bottom: 6px;
+        padding: 10px 14px;
+        border-radius: 8px;
+        margin-bottom: 8px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-size: 12px;
+        background: #FFFFFF !important;
+        border: 1px solid #E2E8F0 !important;
     }
 
-    .alert-bg-critical { background-color: #FEF2F2; border-left: 3px solid #DC2626; }
-    .alert-bg-high { background-color: #FFF7ED; border-left: 3px solid #EA580C; }
+    .alert-bg-critical { background-color: #FEF2F2 !important; border-left: 4px solid #DC2626 !important; }
+    .alert-bg-high { background-color: #FFF7ED !important; border-left: 4px solid #EA580C !important; }
 
     /* Deep Slate Navy Sidebar (#0B132B / #0F172A) */
     section[data-testid="stSidebar"], div[data-testid="stSidebar"] {
@@ -135,11 +150,11 @@ def apply_custom_theme():
         padding: 10px 12px 4px 12px;
     }
 
-    /* Enforce LANDGUARD Blue (#0284C7) on Active Navigation Buttons - NEVER RED */
+    /* VISTRA Forest Green (#166534 / #1E4D2B) for Active Navigation Buttons */
     section[data-testid="stSidebar"] .stButton > button[kind="primary"],
     div[data-testid="stSidebar"] .stButton > button[kind="primary"] {
-        background-color: #0284C7 !important;
-        background-image: none !important;
+        background-color: #166534 !important;
+        background-image: linear-gradient(135deg, #1E4D2B 0%, #15803D 100%) !important;
         color: #FFFFFF !important;
         border: none !important;
         font-weight: 700 !important;
@@ -147,7 +162,7 @@ def apply_custom_theme():
         font-size: 13px !important;
         padding: 8px 14px !important;
         border-radius: 8px !important;
-        box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4) !important;
+        box-shadow: 0 2px 8px rgba(22, 101, 52, 0.4) !important;
     }
 
     section[data-testid="stSidebar"] .stButton > button[kind="secondary"],
@@ -170,7 +185,7 @@ def apply_custom_theme():
         color: #FFFFFF !important;
     }
 
-    /* Small Circular Floating AI Assistant Button (Fixed Bottom-Right) */
+    /* Small Circular Floating AI Assistant Button (Forest Green Accent) */
     div[data-testid="stPopover"] {
         position: fixed !important;
         right: 24px !important;
@@ -181,8 +196,8 @@ def apply_custom_theme():
     }
 
     div[data-testid="stPopover"] > button {
-        background-color: #0284C7 !important;
-        background-image: none !important;
+        background-color: #166534 !important;
+        background-image: linear-gradient(135deg, #1E4D2B 0%, #15803D 100%) !important;
         color: #FFFFFF !important;
         border-radius: 50% !important;
         width: 56px !important;
@@ -194,7 +209,7 @@ def apply_custom_theme():
         padding: 0 !important;
         font-weight: 800 !important;
         font-size: 20px !important;
-        box-shadow: 0 4px 18px rgba(2, 132, 199, 0.6) !important;
+        box-shadow: 0 4px 18px rgba(22, 101, 52, 0.6) !important;
         border: 2px solid #FFFFFF !important;
         display: flex !important;
         align-items: center !important;
@@ -204,9 +219,9 @@ def apply_custom_theme():
     }
 
     div[data-testid="stPopover"] > button:hover {
-        background-color: #0369A1 !important;
+        background-color: #14532D !important;
         transform: scale(1.08) !important;
-        box-shadow: 0 6px 22px rgba(2, 132, 199, 0.7) !important;
+        box-shadow: 0 6px 22px rgba(22, 101, 52, 0.8) !important;
     }
 
     div[data-testid="stPopover"] > button p {
@@ -219,6 +234,8 @@ def apply_custom_theme():
     .dataframe {
         font-size: 12px !important;
         border: 1px solid #E2E8F0 !important;
+        background-color: #FFFFFF !important;
     }
     </style>
     """, unsafe_allow_html=True)
+

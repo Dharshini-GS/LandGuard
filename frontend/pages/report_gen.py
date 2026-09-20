@@ -1,5 +1,5 @@
 """
-Report Generation Center Page for LANDGUARD AI.
+Report Generation Center Page for VISTRA.
 Invokes ReportLab PDF generator service for authorized projects.
 """
 
@@ -49,7 +49,7 @@ def render_report_gen_page(user: dict):
                 st.download_button(
                     label="Download Generated PDF File",
                     data=f.read(),
-                    file_name=f"LANDGUARD_Risk_Report_{selected_pid}.pdf",
+                    file_name=f"VISTRA_Risk_Report_{selected_pid}.pdf",
                     mime="application/pdf",
                     use_container_width=True,
                     key="btn_download_pdf_final"

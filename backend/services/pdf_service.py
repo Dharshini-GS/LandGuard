@@ -1,5 +1,5 @@
 """
-ReportLab PDF Generation Service for LANDGUARD AI.
+ReportLab PDF Generation Service for VISTRA.
 Creates executive project risk assessment PDF reports with clean styling.
 """
 
@@ -102,7 +102,7 @@ def generate_project_pdf_report(project_id: str) -> Path:
     story = []
 
     # Title & Metadata Header
-    story.append(Paragraph("LANDGUARD AI &mdash; Predictive Risk Assessment Report", title_style))
+    story.append(Paragraph("VISTRA &mdash; Predictive Risk Assessment Report", title_style))
     story.append(Paragraph(f"Report ID: {report_id} | Project ID: {project_id} | Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}", subtitle_style))
     story.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor('#0284C7'), spaceAfter=10))
 

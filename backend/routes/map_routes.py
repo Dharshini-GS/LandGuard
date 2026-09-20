@@ -1,5 +1,5 @@
 """
-GIS Map Endpoint for LANDGUARD AI.
+GIS Map Endpoint for VISTRA.
 Returns geospatial coordinates and risk metadata strictly constrained to the user's scope.
 """
 

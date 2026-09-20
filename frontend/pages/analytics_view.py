@@ -1,5 +1,5 @@
 """
-Scope-Aware Analytics & Bottlenecks Page for LANDGUARD AI.
+Scope-Aware Analytics & Bottlenecks Page for VISTRA.
 Clean professional analytical plots.
 """
 

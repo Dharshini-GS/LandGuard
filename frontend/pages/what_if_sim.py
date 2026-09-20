@@ -1,5 +1,5 @@
 """
-What-If Scenario Simulator Page for LANDGUARD AI.
+What-If Scenario Simulator Page for VISTRA.
 Features real-time feature tweaking, Plotly comparative charts, and benchmark scenario comparisons.
 """
 

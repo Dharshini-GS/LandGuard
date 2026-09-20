@@ -1,5 +1,5 @@
 """
-Data Validator for LANDGUARD AI (SIH26017 Prototype).
+Data Validator for VISTRA (SIH26017 Prototype).
 Ensures data integrity, foreign key relations, domain ranges, state/district validity, and business logic rules.
 Stops execution if validation fails.
 """

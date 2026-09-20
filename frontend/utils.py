@@ -1,5 +1,5 @@
 """
-Frontend Data API Client & Session Helper for LANDGUARD AI.
+Frontend Data API Client & Session Helper for VISTRA.
 Directly interfaces with Backend Services and Database Repository for instant high-performance rendering.
 """
 

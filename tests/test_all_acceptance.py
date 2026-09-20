@@ -1,5 +1,5 @@
 """
-Comprehensive Automated Acceptance Test Suite for LANDGUARD AI (SIH26017 Prototype).
+Comprehensive Automated Acceptance Test Suite for VISTRA (SIH26017 Prototype).
 Tests all 16 prompt acceptance criteria using pytest and FastAPI TestClient.
 """
 

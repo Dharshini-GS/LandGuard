@@ -1,5 +1,5 @@
 """
-Audit Logging Service for LANDGUARD AI.
+Audit Logging Service for VISTRA.
 Records security and user action events to SQLite audit_logs table.
 """
 

@@ -1,5 +1,5 @@
 """
-Priority Ranking & Action Recommendations Page for LANDGUARD AI.
+Priority Ranking & Action Recommendations Page for VISTRA.
 Features multi-criteria priority matrix, action briefs, and CSV export.
 """
 
@@ -30,7 +30,7 @@ def render_priority_actions_page(user: dict):
         st.download_button(
             label="Export Action Plan (CSV)",
             data=csv_data,
-            file_name="LANDGUARD_Action_Plan.csv",
+            file_name="VISTRA_Action_Plan.csv",
             mime="text/csv",
             use_container_width=True,
             key="btn_export_action_csv"
