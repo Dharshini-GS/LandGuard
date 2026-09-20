@@ -83,8 +83,6 @@ def render_login_page():
                 with st.spinner(f"Signing in as {profile['role_label']}..."):
                     user = login_user(profile['username'], profile['password'])
                     if user:
-                        st.session_state["input_uname"] = profile['username']
-                        st.session_state["input_pwd"] = profile['password']
                         st.success(f"Authenticated as {user['full_name']}")
                         st.rerun()
 
@@ -100,8 +98,8 @@ def render_login_page():
         """, unsafe_allow_html=True)
         st.caption("Enter custom credentials to access VISTRA services.")
 
-        username_input = st.text_input("Username", placeholder="Enter username", key="input_uname", value=st.session_state.get("input_uname", ""))
-        password_input = st.text_input("Password", type="password", placeholder="Enter password", key="input_pwd", value=st.session_state.get("input_pwd", ""))
+        username_input = st.text_input("Username", placeholder="Enter username", key="input_uname")
+        password_input = st.text_input("Password", type="password", placeholder="Enter password", key="input_pwd")
 
         st.markdown("<br/>", unsafe_allow_html=True)
         if st.button("SIGN IN TO VISTRA", type="primary", use_container_width=True, key="btn_login_submit"):
