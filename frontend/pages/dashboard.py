@@ -11,6 +11,12 @@ import pandas as pd
 from frontend.utils import fetch_filtered_projects
 from utils.geo_data import GEO_REFERENCE, PROJECT_TYPES, LIFECYCLE_STAGES
 
+def reset_dashboard_filters():
+    st.session_state["dash_filter_state"] = "All"
+    st.session_state["dash_filter_risk"] = "All"
+    st.session_state["dash_filter_type"] = "All"
+    st.session_state["dash_filter_stage"] = "All"
+
 def render_dashboard_page(user: dict):
     # 1. Global Filter Bar
     with st.expander("DASHBOARD FILTERS", expanded=True):
@@ -34,12 +40,7 @@ def render_dashboard_page(user: dict):
 
         with f6:
             st.write("<div style='height:28px;'></div>", unsafe_allow_html=True)
-            if st.button("Reset Filters", use_container_width=True, key="btn_reset_dash_filters"):
-                st.session_state["dash_filter_state"] = "All"
-                st.session_state["dash_filter_risk"] = "All"
-                st.session_state["dash_filter_type"] = "All"
-                st.session_state["dash_filter_stage"] = "All"
-                st.rerun()
+            st.button("Reset Filters", use_container_width=True, key="btn_reset_dash_filters", on_click=reset_dashboard_filters)
 
     st_filter = None if filter_state == "All" else filter_state
     rk_filter = None if filter_risk == "All" else filter_risk
