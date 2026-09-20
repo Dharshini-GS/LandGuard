@@ -12,10 +12,9 @@ from frontend.utils import fetch_filtered_projects
 from utils.geo_data import GEO_REFERENCE, PROJECT_TYPES, LIFECYCLE_STAGES
 
 def reset_dashboard_filters():
-    st.session_state["dash_filter_state"] = "All"
-    st.session_state["dash_filter_risk"] = "All"
-    st.session_state["dash_filter_type"] = "All"
-    st.session_state["dash_filter_stage"] = "All"
+    for key in ["dash_filter_state", "dash_filter_risk", "dash_filter_type", "dash_filter_stage", "dash_filter_period"]:
+        if key in st.session_state:
+            del st.session_state[key]
 
 def render_dashboard_page(user: dict):
     # 1. Global Filter Bar
